@@ -1,0 +1,205 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Page Background */
+body {
+    background: #121212;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Main Container */
+.container {
+    width: 90%;
+    max-width: 60%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* App Title */
+.app-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* City Selector */
+.city-selector {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Weather Info */
+.weather-info {
+    margin-top: 20px;
+    color: rgb(232, 157, 17);
+}
+
+.temp {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.desc {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+/* Forecast Section */
+.forecast {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.forecast div {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    border-radius: 10px;
+    flex: 1;
+    text-align: center;
+    margin: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 300px;
+}
+
+.popup select, 
+.popup button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+/* Popup Overlay */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 350px;
+    text-align: center;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Smooth popup animation */
+.popup.show {
+    display: block;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup.hide {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.95);
+}
+
+/* Input field */
+#city-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/* Suggestions Box */
+.suggestions {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 5px;
+    max-height: 150px;
+    overflow-y: auto;
+    text-align: left;
+}
+
+.suggestions div {
+    padding: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.suggestions div:hover {
+    background: #007bff;
+    color: white;
+}
+
+/* Buttons */
+.popup button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.popup button:hover {
+    background: #0056b3;
+}
